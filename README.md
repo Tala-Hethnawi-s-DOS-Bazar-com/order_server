@@ -6,7 +6,9 @@ To run it please do the following:
 
 1- Make sure you have vagrant and virtualbox installed
 
-2- Within the repo directory run these commands in your terminal:
+2- Make sure Catalog server is running
+
+3- Within the repo directory run these commands in your terminal:
 * vagrant up
 * vagrant ssh
 * cd /vagrant
