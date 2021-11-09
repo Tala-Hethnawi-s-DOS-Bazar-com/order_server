@@ -15,11 +15,10 @@ Vagrant.configure("2") do |config|
  config.vm.box = "hashicorp/bionic64"
  config.vm.box_version = "1.0.282"
 
- config.vm.network "public_network", ip: "192.168.50.20"
+ config.vm.network "private_network", ip: "192.168.50.20"
 
  config.vm.provider "virtualbox" do |vb|
-   vb.gui = true
-   vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+   vb.gui = false
  end
 
  config.vm.provision "shell", inline: <<-SHELL
