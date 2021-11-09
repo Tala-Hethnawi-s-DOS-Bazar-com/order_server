@@ -8,7 +8,7 @@ Base = declarative_base()
 
 
 class Order(Base):
-    __tablename__ = 'book'
+    __tablename__ = 'order'
 
     id = Column(Integer, primary_key=True)
     book_id = Column(Integer, nullable=False)
