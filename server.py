@@ -22,6 +22,7 @@ def purchase(book_id):
             session.add(order)
             catalog_service.updateBookQuantity(book_id=book_id, quantity=(quantity-1))
             session.commit()
+            print("Bought book {book_title}".format(book_title=book_info["title"]))
             return jsonify({"message": "Bought book {book_title}".format(book_title=book_info["title"])})
     except Exception:
         return jsonify({"error": "Sorry!, we were unable to process your order"}), 500
