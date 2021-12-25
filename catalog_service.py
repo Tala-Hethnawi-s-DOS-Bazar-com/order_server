@@ -3,7 +3,7 @@ import json
 
 
 class CatalogService:
-    __CATALOG_SERVER_URL = "http://192.168.50.10:5000/"
+    __CATALOG_SERVER_URL = "http://172.18.0.20:5000/"
     __INFO_ENDPOINT = "info/{book_id}"
     __UPDATE_QUANTITY_ENDPOINT = "update/{book_id}"
 

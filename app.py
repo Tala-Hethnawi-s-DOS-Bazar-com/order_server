@@ -26,3 +26,7 @@ def purchase(book_id):
             return jsonify({"message": "Bought book {book_title}".format(book_title=book_info["title"])})
     except Exception:
         return jsonify({"error": "Sorry!, we were unable to process your order"}), 500
+
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
