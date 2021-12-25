@@ -8,9 +8,7 @@ class ReplicaSyncService:
 
     def sync_order(self, book_id):
         current_ip = os.environ.get("SERVER_IP")
-        print(current_ip)
         replicas_urls = [_url for _url in self.__REPLICAS_URLS if current_ip not in _url]
-        print(replicas_urls)
         for _url in replicas_urls:
             url = _url + self.__SYNC_ENDPOINT.format(book_id=book_id)
             response = requests.post(url=url)
